@@ -5,10 +5,23 @@ using UnityEngine;
 public class ItemUsing : MonoBehaviour
 {
     public GameObject bullet;
+    public float coolDown;
+    public bool canShoot;
+
+    void ReadyToFire()
+    {
+        canShoot = true;
+    }
 
     public void UseLeftMouse()
-    {
-        Instantiate(bullet, transform.position, transform.rotation);
+    {   
+        if (canShoot)
+        {
+            Instantiate(bullet, transform.position, transform.rotation);
+            canShoot = false;
+            Invoke("ReadyToFire", coolDown);
+        }
+        
     }
 
     public void UseRightMouse()

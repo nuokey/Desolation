@@ -21,7 +21,7 @@ public class PickUp : MonoBehaviour
             {
                 collision.transform.SetParent(transform.parent.GetChild(0));
                 collision.transform.localPosition = new Vector3(0f, 0f, 0f);
-                collision.transform.localEulerAngles = new Vector3(0f, 0f, -90f);
+                collision.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             }
         }
     }

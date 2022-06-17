@@ -7,10 +7,10 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
 
-    private void Start()
+    void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.forward * speed);
+        rb.AddForce(transform.up * speed);
     }
 
     void FixedUpdate()

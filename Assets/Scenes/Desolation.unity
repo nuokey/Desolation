@@ -262,9 +262,9 @@ GameObject:
   m_Component:
   - component: {fileID: 491633764}
   - component: {fileID: 491633765}
+  - component: {fileID: 491633769}
   - component: {fileID: 491633766}
   - component: {fileID: 491633767}
-  - component: {fileID: 491633769}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -279,13 +279,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491633763}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: 0.33, z: 0}
-  m_LocalScale: {x: 0.5000001, y: 0.20000006, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &491633765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -350,6 +350,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7010685516398986108, guid: a65932e66d052e64990a71703941fdfd, type: 3}
+  coolDown: 1
+  canShoot: 1
 --- !u!114 &491633767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,9 +999,9 @@ GameObject:
   - component: {fileID: 1398764964}
   - component: {fileID: 1398764963}
   - component: {fileID: 1398764965}
-  - component: {fileID: 1398764966}
   - component: {fileID: 1398764967}
   - component: {fileID: 1398764968}
+  - component: {fileID: 1398764966}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1066,8 +1068,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398764962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5505, y: -2.0795, z: -1}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 2.02, y: -0.86, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1192283033}
   - {fileID: 425304761}
@@ -1106,9 +1108,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.015}
   serializedVersion: 2
-  m_Radius: 0.33
+  m_Radius: 0.21
 --- !u!50 &1398764967
 Rigidbody2D:
   serializedVersion: 4

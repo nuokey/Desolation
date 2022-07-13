@@ -26,6 +26,10 @@ public class Using : MonoBehaviour
             {
                 transform.GetChild(activeSlot).GetChild(0).GetComponent<ItemUsing>().UseRightMouse();
             }
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                transform.GetChild(activeSlot).GetChild(0).GetComponent<ItemUsing>().UseLeftMouseDown();
+            }
         }
     }
 

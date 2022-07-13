@@ -7,6 +7,7 @@ public class ItemUsing : MonoBehaviour
     public GameObject bullet;
     public float coolDown;
     public bool canShoot;
+    public float bulletSpawnOffset;
 
     void ReadyToFire()
     {
@@ -17,15 +18,24 @@ public class ItemUsing : MonoBehaviour
     {   
         if (canShoot)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            Instantiate(bullet, transform.position + transform.up * bulletSpawnOffset, transform.rotation);
             canShoot = false;
             Invoke("ReadyToFire", coolDown);
         }
         
     }
 
+    public void UseLeftMouseDown()
+    {
+
+    }
+
     public void UseRightMouse()
     {
-        Debug.Log("Right");
+        
+    }
+    public void UseRightMouseDown()
+    {
+        
     }
 }

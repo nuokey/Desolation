@@ -39,6 +39,8 @@ public class Movement : MonoBehaviour
 
     void Turning()
     {
+        zRotation = transform.localEulerAngles.z;
+
         float mouseX = Input.GetAxis("Mouse X") * mouseHorizontalSens * Time.deltaTime;
         zRotation -= mouseX;
         transform.localRotation = Quaternion.Euler(0f, 0f, zRotation);

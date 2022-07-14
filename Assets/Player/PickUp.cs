@@ -20,7 +20,7 @@ public class PickUp : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 collision.transform.SetParent(transform.parent.GetChild(0));
-                collision.transform.localPosition = new Vector3(0f, 0f, 0f);
+                collision.transform.localPosition = collision.GetComponent<Item>().slotOffset;
                 collision.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             }
         }

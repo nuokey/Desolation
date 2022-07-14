@@ -28,17 +28,13 @@ public class Using : MonoBehaviour
     {
         if (activeSlot != -1)
         {
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-                transform.GetChild(activeSlot).GetChild(0).GetComponent<ItemUsing>().UseLeftMouse();
-            }
-            if (Input.GetKey(KeyCode.Mouse1))
-            {
-                transform.GetChild(activeSlot).GetChild(0).GetComponent<ItemUsing>().UseRightMouse();
-            }
             if(Input.GetKeyDown(KeyCode.Mouse0))
             {
-                transform.GetChild(activeSlot).GetChild(0).GetComponent<ItemUsing>().UseLeftMouseDown();
+                transform.GetChild(activeSlot).GetChild(0).GetComponent<Item>().UseLeftMouseDown();
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                transform.GetChild(activeSlot).GetChild(0).GetComponent<Item>().UseLeftMouseUp();
             }
         }
     }

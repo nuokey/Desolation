@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item: MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string typeOfItem;
 
-    // Update is called once per frame
-    void Update()
+    public Vector3 slotOffset;
+
+    public void UseLeftMouseDown()
     {
-        
+        if (typeOfItem == "Weapon")
+        {
+            transform.GetComponent<Weapon>().Fire();
+            transform.GetComponent<Weapon>().isFire = true;
+        }
+    }
+    public void UseLeftMouseUp()
+    {
+        if (typeOfItem == "Weapon")
+        {
+            transform.GetComponent<Weapon>().isFire = false;
+        }
     }
 }

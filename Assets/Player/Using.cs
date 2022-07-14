@@ -5,12 +5,22 @@ using UnityEngine;
 public class Using : MonoBehaviour
 {
     public int activeSlot = -1;
+    public GameObject slot1;
 
     void Slots()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            transform.GetComponent<Using>().activeSlot = 0;
+        {   
+            if (activeSlot != 0) 
+            {
+                transform.GetComponent<Using>().activeSlot = 0;
+                slot1.SetActive(true);
+            }
+            else 
+            {
+                transform.GetComponent<Using>().activeSlot = -1;
+                slot1.SetActive(false);
+            }
         }
     }
 
